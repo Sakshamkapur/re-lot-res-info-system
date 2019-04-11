@@ -71,6 +71,10 @@ var UserSchema = new mongoose.Schema({
 var User = Uconnect.model('User', UserSchema);
 
 
+app.get('/properties_list',sessionChecker,function(req,res){
+    res.render('properties.ejs');
+});
+
 // register post
 app.post('/register_details',urlencodedParser,function(req,res){
     bcrypt.hash(req.body.pass, saltRounds, function(err, hash) {
@@ -112,10 +116,6 @@ app.post('/login_details',urlencodedParser,function(req,res){
     });
 });
 
-// register get
-app.get('/properties_list',function(req,res){
-    res.render('properties.ejs');
-});
 
 // logout get
 app.get('/logout',function(req,res){

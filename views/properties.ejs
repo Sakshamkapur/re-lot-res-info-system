@@ -1,8 +1,37 @@
 <html>
 <head>
-	<title>properties list</title>
+	<title>Properties List</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/properties.css">
 </head>
-<body>
-	<h1>hi</h1>
+<body style="padding-left: 10%;">
+<% include partials/sidebar.ejs %>
+<div class="card">
+  <div class="cardImg">
+    <!-- <span class="circle">27<br/>mar</span>
+    <span class="cardImgFooter">photos</span> -->
+  </div>
+  <div class="cardText">
+    <span class="title">site name</span>
+    <span class="subtitle">location</span>
+    <p class="cardDescription">
+      House Model Information - Model Name, Standard Price, Floor Area, Lot Are<br/>
+      House Units Information - House Model (the house model type), Development Site (the site where it is built), Block, Lot
+      <br>
+      <a class="cardReadMore" href="#">View detail<img src="https://img.icons8.com/android/12/ffffff/play.png"></a>
+    </p>
+    
+    <div class="cardFooter">
+      <span class="timeAgo">
+        <img src="https://img.icons8.com/android/14/000000/clock.png">
+        6 mins ago</span>
+      <span class="comments">
+        <img src="https://img.icons8.com/android/14/646464/speech-bubble.png">
+        39 comments</span>
+    </div>
+  </div>
+</div>
+
 </body>
+ <script type="text/javascript" src="/views/properties.js"></script>
 </html>
