@@ -62,17 +62,52 @@ function loggedIn(req, res, next) {
 var Uconnect = mongoose.createConnection('mongodb://dev:dev123@ds249873.mlab.com:49873/users',{
     useNewUrlParser: true
 });
+var Pconnect = mongoose.createConnection('mongodb://dev:dev123@ds135726.mlab.com:35726/properties',{
+    useNewUrlParser: true
+});
 
 var UserSchema = new mongoose.Schema({
    email: { type : String },
    password: {type : String}
 });
+var PropertySchema = new mongoose.Schema({
+   site_name: { type : String },
+   location: {type : String},
+   house_model_info: {type : String},
+   house_unit_info: {type : String},
+   created_on: {type : String}
+});
 
 var User = Uconnect.model('User', UserSchema);
+var Property = Uconnect.model('Property', PropertySchema);
 
 
-app.get('/properties_list',sessionChecker,function(req,res){
-    res.render('properties.ejs');
+
+
+app.get('/create/properties',loggedIn,sessionChecker,function(req,res){
+    res.render('create_properties.ejs');
+});
+
+app.get('/properties_list/',loggedIn,sessionChecker, function(req,res){
+  Property.find({}, function(err, data){
+      if (err) return callback(err);
+      res.render('properties.ejs',{row: data,auth: req.session.user});
+  });
+});
+
+app.post('/view',urlencodedParser, function (req, res) {
+  console.log(req.body);
+  d={ site_name: req.body.site_name,
+      location: req.body.location,
+      house_model_info: req.body.house_model_info,
+      house_unit_info: req.body.house_unit_info,
+      created_on: req.body.created_on
+  };
+  console.log(d);
+  var newProperty = Property(d).save(function(err,data){
+    if(err) throw err;
+    res.json(data);
+  });
 });
 
 // register post

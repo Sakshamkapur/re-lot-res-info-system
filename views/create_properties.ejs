@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Development Site</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/create.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	<% include partials/sidebar.ejs %>
+ 	<div class="card">
+ 		<h4>Create a Development Site</h4>
+ 		<form>
+	 		<label>Site name</label>
+	 		<article class="tags-bar">
+	 		<input type="text" id="sitename" class="title" name="title" placeholder="Add Title">
+	 		</article>
+	 		<hr>
+	 		<label>Location : </label>
+	 		<article class="tags-bar">
+	 		<input type="text" id="location" class="title" name="title" placeholder="Add Title">
+	 		</article>
+	 		<hr>
+	 		<label>House Model Information : </label>
+	 		<article class="tags-bar">
+	 		<textarea class="cont" id="housemodal" name="cont" placeholder="Model Name, Standard Price, Floor Area, Lot Area"></textarea>
+	 		</article>
+	 		<hr>
+	 		<label>House Units Information  : </label>
+	 		<article class="tags-bar">
+	 		<textarea class="cont" id="houseunits" name="cont" placeholder=" House Model, Development Site, Block, Lot"></textarea>
+	 		</article>
+	 		<button type="button" class="btn btn-default" id="submit">Publish</button>
+ 		</form>
+ 	</div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/create.js"></script>
+</html>
