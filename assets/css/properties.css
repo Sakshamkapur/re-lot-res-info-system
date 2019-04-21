@@ -24,6 +24,7 @@ p {
   border-radius: 2%;
 }
 .card:hover {
+  opacity: 0.6;
   transition: all 0.4s ease;
 }
 .card:hover .cardDescription {

@@ -1,0 +1,293 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+progress {
+  display: block; /* default: inline-block */
+  width: 300px;
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3);
+  
+}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  progress {
+    height: 25px;
+  }
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}  
+progress::-webkit-progress-value {  
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3); 
+} 
+/* environnement styles */
+
+
+progress h1 {
+  color: #eee;
+  font: 30px Helvetica, Arial, sans-serif;
+  text-shadow: 0px 1px black;
+  text-align: center;
+  margin-bottom: 50px;
+  -webkit-font-smoothing: antialiased;
+}
+progress p {
+  text-align:center;
+}
+.acceptbtn {
+  border: 0;
+  background: #FFF;
+  width: 155px;
+  padding: 5px;
+  margin: 0 10px;
+  line-height: 23px;
+  font-weight: bold;
+  color: #555;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 3px rgba(0,0,0,.4), 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.search {
+  width: 85%;
+  position: relative;
+  margin: auto;
+}
+.search:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  font-family: 'FontAwesome';
+  content: '\f0b0';
+  background: #1fa5b5;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smooth: always;
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+.searchTerm {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: 6px solid #1fa5b5;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+  content: f0b0;
+}
+
+html {
+  color: #283E55;
+  padding: 20px;
+  font-family: 'raleway';
+  font-size: 15px;
+  line-height: 20px;
+}
+
+h2 {
+  color: #408BC8;
+  font-weight: 800;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+.card {
+  margin: 20px auto;
+  display: block;
+  background: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(64, 139, 200, 0.5);
+  overflow: hidden;
+  max-width: 800px;
+}
+.card:hover{
+  opacity: 0.6;
+}
+.card .card-stuff {
+  width: 80%;
+  padding: 20px 40px;
+  padding-right: 75px;
+  transition: .3s ease-in-out;
+}
+.card .card-stuff time {
+  float: right;
+  position: relative;
+  top: -25px;
+  font-size: 12px;
+}
+.card .card-stuff.active {
+  width: 60%;
+}
+.card .com-contain {
+  overflow: hidden;
+  position: absolute;
+  padding-top: 40px;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: #408BC8;
+  box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all cubic-bezier(0.75, 0.03, 0.41, 1.4);
+}
+.card .com-contain:hover {
+  transition: 0.3s all cubic-bezier(0.75, 0.03, 0.41, 1.4);
+  background: #357eb9;
+  box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.2), inset -3px 0px #3276ad;
+}
+.card .com-contain.active {
+  width: 30%;
+  max-width: 300px;
+}
+.card .com-contain.active:hover {
+  background: #408bc8;
+  box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.2), inset -3px 0px #3276ad;
+}
+.card .com-contain.active .com-stuff {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition-delay: .3s;
+}
+.card .com-contain.active .com-desc {
+  -webkit-transform: translateX(300px) rotate(90deg);
+          transform: translateX(300px) rotate(90deg);
+  transition-delay: 0s;
+}
+.card .com-contain.active .com-expand {
+  background: transparent;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+.card .com-contain.active .com-expand:before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  top: 0;
+  left: 0;
+  width: 25px;
+  background: #bfddf2;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.card .com-contain.active .com-expand:after {
+  -webkit-transform: rotate(-495deg);
+          transform: rotate(-495deg);
+  -webkit-transform-origin: 50% 10%;
+          transform-origin: 50% 10%;
+  top: 0;
+  left: 0;
+  width: 25px;
+  background: #bfddf2;
+}
+
+.com-expand-holder {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-top: 10px;
+  z-index: 99;
+}
+.com-expand-holder:hover .com-expand, .com-expand-holder:hover .com-expand:before, .com-expand-holder:hover .com-expand:after {
+  transition: .3s all ease-out;
+  background: #24567e;
+}
+
+.com-expand {
+  width: 25px;
+  height: 4px;
+  display: block;
+  background: white;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: .3s all ease-in-out;
+}
+.com-expand:before, .com-expand:after {
+  content: '';
+  background: white;
+  width: 15px;
+  height: 4px;
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  transition: .3s all ease-in-out;
+}
+.com-expand:before {
+  top: -3px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.com-expand:after {
+  top: 0px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.com-stuff {
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  transition: 0.3s all cubic-bezier(0.36, 0.49, 0.26, 1.27);
+}
+.com-stuff p {
+  margin-top: 0px;
+}
+
+.com-desc {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 70px;
+  left: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  -webkit-transform-origin: 23% 50%;
+          transform-origin: 23% 50%;
+  width: 100px;
+  transition: 0.3s all cubic-bezier(0.36, 0.49, 0.26, 1.27);
+  transition-delay: .3s;
+}
