@@ -40,7 +40,7 @@ $('#submit').click(function(){
           type: 'POST',
           url: "/view",
           data: myKeyVals,
-          success: function(resultData) { alert('The Development site has been added Successfully !'); window.location.reload(); }
+          success: function(resultData) { console.log(resultData); alert('The Development site has been added Successfully !');}
       });
   }
 });

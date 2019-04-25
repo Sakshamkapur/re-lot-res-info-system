@@ -1,3 +1,4 @@
+
 $('.edit').click(function(){
 	var id = $(this)[0].id
 	var sitename = $('.sitename').val();

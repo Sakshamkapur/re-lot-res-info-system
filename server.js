@@ -85,7 +85,8 @@ var ClientSchema = new mongoose.Schema({
    email: {type : String},
    company: {type : String},
    payment: {type : String},
-   site_id: {type : String}
+   site_id: {type : String},
+   percent: {type: Number}
 });
 
 var User = Uconnect.model('User', UserSchema);
